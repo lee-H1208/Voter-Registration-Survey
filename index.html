@@ -15,10 +15,65 @@
         <h2>Demographics</h2>
         <hr>
         <fieldset class="demographics">
-            <label for="name">Enter Your Name: <input id="name" type="text" placeholder="Enter your name"
-                    required /></label>
+            <label id="name-label" for="name">Enter Your Name: <input id="name" type="text"
+                    placeholder="Enter your name" required /></label>
+            <label id="email-label" for="email">Enter Your Email: <input id="email" type="email"
+                    placeholder="Enter your email" required /></label>
+            <label id="number-label" for="number">Input your age (years): <input id="number" type="number" name="age"
+                    min="18" max="120" placeholder="You must be at least 18..." /></label>
+            <label for="dropdown">What is your gender?
+                <select id="dropdown" name="dropdown">
+                    <option value="">(select one)</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                    <option value="3">Non-binary</option>
+                    <option value="4">Prefer not to say</option>
+                </select>
+            </label>
         </fieldset>
+        <hr class="end-break">
+        <h2>Attitudes and Awareness</h2>
         <hr>
+        <fieldset>
+            <legend>1) How important do you think it is to vote in elections?</legend>
+            <label for="q1a1"><input id="q1a1" type="radio" value="very" name="important" class="inline" checked /> Very
+                important</label>
+            <label for="q1a2"><input id="q1a2" type="radio" value="somewhat" name="important" class="inline" /> Somewhat
+                important</label>
+            <label for="q1a3"><input id="q1a3" type="radio" value="not very" name="important" class="inline" /> Not very
+                important</label>
+            <label for="q1a4"><input id="q1a4" type="radio" value="not at all" name="important" class="inline" /> Not
+                important at all</label>
+        </fieldset>
+        <hr class="end-break">
+        <h2>Engagement and Communication</h2>
+        <hr>
+        <fieldset>
+            <legend>1) How do you prefer to receive information about voter registration and elections?</legend>
+            <legend><strong>(Select all that apply)</strong></legend>
+            <label for="q1a1"><input id="q1a1" type="checkbox" value="email" name="information" class="inline" />
+                Email</label>
+            <label for="q1a2"><input id="q1a2" type="checkbox" value="social media" name="information" class="inline" />
+                Social media</label>
+            <label for="q1a3"><input id="q1a3" type="checkbox" value="text message" name="information" class="inline" />
+                Text message</label>
+            <label for="q1a4"><input id="q1a4" type="checkbox" value="phone call" name="information" class="inline" />
+                Phone call</label>
+            <label for="q1a4"><input id="q1a4" type="checkbox" value="mail" name="information" class="inline" />
+                Mail</label>
+            <label for="q1a4"><input id="q1a4" type="checkbox" value="in-person" name="information" class="inline" /> In
+                person</label>
+            <label for="q1a4"><input id="q1a4" type="checkbox" value="other-specify" name="information"
+                    class="inline" /> Other: <input id="other" type="text" placeholder="(please specify)" /> </label>
+        </fieldset>
+        <hr class="end-break">
+        <h2>Final Thoughts</h2>
+        <hr>
+        <fieldset>
+            <legend>Do you have any additional comments or suggestions about voter registration?</legend>
+            <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Enter your comment here..."></textarea>
+            <hr class="end-break">
+            <input type="submit" value="Submit" id="submit" />
     </form>
 
 </body>
