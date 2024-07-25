@@ -9,9 +9,43 @@
 
 <body>
     <h1 id="title">Voter Registration Survey</h1>
+    <img id="vote-image" src="imgs/voting-box.png" alt="voting-box">
     <p id="description">Thank you for taking the time to fill out this form!</p>
     <hr id="first-break">
     <form id="survey-form">
+        <h2>Basic Information</h2>
+        <hr>
+        <fieldset class="basic-info">
+            <label for="dropdown">1) Are you currently registered to vote?
+                <select id="dropdown" name="dropdown">
+                    <option value="">(select one)</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                    <option value="3">Not sure</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset class="basic-info">
+            <legend>2) If you are not registered, what are the main reasons?</legend>
+            <legend><strong>(Select all that apply)</strong></legend>
+            <label for="q2a1"><input id="q2a1" class="inline" type="checkbox" value="I am not interested in voting"> I am not interested in voting</label>
+            <label for="q2a2"><input id="q2a2" class="inline" type="checkbox" value="I am not a citizen"> I am not a citizen</label>
+            <label for="q2a3"><input id="q2a3" class="inline" type="checkbox" value="I am too busy"> I am too busy</label>
+            <label for="q2a4"><input id="q2a4" class="inline" type="checkbox" value="I don't know how to register"> I don't know how to register</label>
+            <label for="q2a5"><input id="q2a5" class="inline" type="checkbox" value="I have recently moved and haven't updated my registration"> I have recently moved and haven't updated my registration</label>
+            <label for="q2a6"><input id="q2a6" class="inline" type="checkbox" value="Concerns about privacy/security"> Concerns about privacy/security</label>
+            <label for="q2a7"><input id="q1a4" type="checkbox" value="other-specify" name="information"
+                class="inline" /> Other: <input id="other" type="text" placeholder="(please specify)" /> </label>
+        </fieldset>
+        <fieldset class="basic-info">
+            <legend>3) If you are registered, how did you register to vote?</legend>
+            <label for="q3a1"><input id="q3a1" type="radio" value="online" name="register" class="inline" /> Online</label>
+            <label for="q3a2"><input id="q3a2" type="radio" value="mail" name="register" class="inline" /> By mail</label>
+            <label for="q3a3"><input id="q3a3" type="radio" value="gov" name="register" class="inline" /> In person at a government office (DMV, county clerk, etc.)</label>
+            <label for="q3a4"><input id="q3a4" type="radio" value="event" name="register" class="inline" /> At a voter registration drive or event</label>
+            <label for="q3a5"><input id="q3a5" type="radio" value="other" name="register" class="inline" /> Other: <input id="other" type="text" placeholder="(please specify)" </label>
+        </fieldset>
+        <hr class="end-break">
         <h2>Demographics</h2>
         <hr>
         <fieldset class="demographics">
@@ -24,10 +58,22 @@
             <label for="dropdown">What is your gender?
                 <select id="dropdown" name="dropdown">
                     <option value="">(select one)</option>
-                    <option value="1">Male</option>
-                    <option value="2">Female</option>
-                    <option value="3">Non-binary</option>
-                    <option value="4">Prefer not to say</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="non-binary">Non-binary</option>
+                    <option value="prefer-no">Prefer not to say</option>
+                </select>
+            </label>
+            <label for="dropdown">What is your highest level of education?
+                <select id="dropdown" name="dropdown">
+                    <option value="">(select one)</option>
+                    <option value="some high school">Some high school</option>
+                    <option value="high school graduate">High school graduate</option>
+                    <option value="some college">Some college</option>
+                    <option value="associates">Associate's degree</option>
+                    <option value="bachelors">Bachelor's degree</option>
+                    <option value="graduate">Graduate degree</option>
+                    <option value="prefer-no">Prefer not to say</option>
                 </select>
             </label>
         </fieldset>
@@ -36,14 +82,30 @@
         <hr>
         <fieldset>
             <legend>1) How important do you think it is to vote in elections?</legend>
-            <label for="q1a1"><input id="q1a1" type="radio" value="very" name="important" class="inline" checked /> Very
-                important</label>
-            <label for="q1a2"><input id="q1a2" type="radio" value="somewhat" name="important" class="inline" /> Somewhat
-                important</label>
-            <label for="q1a3"><input id="q1a3" type="radio" value="not very" name="important" class="inline" /> Not very
-                important</label>
-            <label for="q1a4"><input id="q1a4" type="radio" value="not at all" name="important" class="inline" /> Not
-                important at all</label>
+            <label for="q4a1"><input id="q4a1" type="radio" value="very" name="important" class="inline" checked /> Very important</label>
+            <label for="q4a2"><input id="q4a2" type="radio" value="somewhat" name="important" class="inline" /> Somewhat important</label>
+            <label for="q4a3"><input id="q4a3" type="radio" value="not very" name="important" class="inline" /> Not very important</label>
+            <label for="q4a4"><input id="q4a4" type="radio" value="not at all" name="important" class="inline" /> Not important at all</label>
+        </fieldset>
+        <fieldset>
+            <legend>2) Are you aware of your state's voter registration deadlines?</legend>
+            <label for="q5a1"><input id="q5a1" type="radio" value="yes" name="awareness" class="inline" checked /> Yes</label>
+            <label for="q5a2"><input id="q5a2" type="radio" value="no" name="awareness" class="inline" /> No</label>
+            <label for="q5a3"><input id="q5a3" type="radio" value="not sure" name="awareness" class="inline" /> Not sure</label>
+        </fieldset>
+        <fieldset>
+            <legend>3) How easy or difficult do you find the voter registration process?</legend>
+            <label for="q6a1"><input id="q6a1" type="radio" value="very easy" name="difficulty" class="inline" checked /> Very easy</label>
+            <label for="q6a2"><input id="q6a2" type="radio" value="easy" name="difficulty" class="inline" /> Easy</label>
+            <label for="q6a3"><input id="q6a3" type="radio" value="neutral" name="difficulty" class="inline" /> Neutral</label>
+            <label for="q6a4"><input id="q6a4" type="radio" value="difficult" name="difficulty" class="inline" /> Difficult</label>
+            <label for="q6a5"><input id="q6a4" type="radio" value="ver difficult" name="difficulty" class="inline" /> Very difficult</label>
+        </fieldset>
+        <fieldset>
+            <legend>4) Would you participate in voting if voter registration was automatic?</legend>
+            <label for="q7a1"><input id="q7a1" type="radio" value="yes" name="participation" class="inline" checked /> Yes</label>
+            <label for="q7a2"><input id="q7a2" type="radio" value="no" name="participation" class="inline" /> No</label>
+            <label for="q7a3"><input id="q7a3" type="radio" value="not sure" name="participation" class="inline" /> Not sure</label>
         </fieldset>
         <hr class="end-break">
         <h2>Engagement and Communication</h2>
@@ -51,20 +113,25 @@
         <fieldset>
             <legend>1) How do you prefer to receive information about voter registration and elections?</legend>
             <legend><strong>(Select all that apply)</strong></legend>
-            <label for="q1a1"><input id="q1a1" type="checkbox" value="email" name="information" class="inline" />
+            <label for="q8a1"><input id="q8a1" type="checkbox" value="email" name="information" class="inline" />
                 Email</label>
-            <label for="q1a2"><input id="q1a2" type="checkbox" value="social media" name="information" class="inline" />
+            <label for="q8a2"><input id="q8a2" type="checkbox" value="social media" name="information" class="inline" />
                 Social media</label>
-            <label for="q1a3"><input id="q1a3" type="checkbox" value="text message" name="information" class="inline" />
+            <label for="q8a3"><input id="q8a3" type="checkbox" value="text message" name="information" class="inline" />
                 Text message</label>
-            <label for="q1a4"><input id="q1a4" type="checkbox" value="phone call" name="information" class="inline" />
+            <label for="q8a4"><input id="q8a4" type="checkbox" value="phone call" name="information" class="inline" />
                 Phone call</label>
-            <label for="q1a4"><input id="q1a4" type="checkbox" value="mail" name="information" class="inline" />
+            <label for="q8a5"><input id="q8a5" type="checkbox" value="mail" name="information" class="inline" />
                 Mail</label>
-            <label for="q1a4"><input id="q1a4" type="checkbox" value="in-person" name="information" class="inline" /> In
+            <label for="q8a6"><input id="q8a6" type="checkbox" value="in-person" name="information" class="inline" /> In
                 person</label>
-            <label for="q1a4"><input id="q1a4" type="checkbox" value="other-specify" name="information"
+            <label for="q8a7"><input id="q8a7" type="checkbox" value="other-specify" name="information"
                     class="inline" /> Other: <input id="other" type="text" placeholder="(please specify)" /> </label>
+        </fieldset>
+        <fieldset>
+            <legend>2) Would you like to receive reminders about upcoming elections and voting deadlines?</legend>
+            <label for="q9a1"><input id="q9a1" type="radio" value="yes" name="reminders" class="inline" checked /> Yes</label>
+            <label for="q9a2"><input id="q9a2" type="radio" value="no" name="reminders" class="inline" /> No</label>
         </fieldset>
         <hr class="end-break">
         <h2>Final Thoughts</h2>
@@ -74,8 +141,12 @@
             <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Enter your comment here..."></textarea>
             <hr class="end-break">
             <input type="submit" value="Submit" id="submit" />
+        </fieldset>
     </form>
 
-</body>
+    <footer>
+        <a id="attribution" target="_blank" href="https://www.flaticon.com/free-icons/ballot" title="ballot icons">Ballot icons created by juicy_fish - Flaticon</a>
+    </footer>
 
+</body>
 </html>

@@ -1,10 +1,10 @@
 body {
     width: 100%;
-    height: 100vh;
     margin: 0;
     background-color: #101d35;
     color: #f2f1e3;
     font-family: verdana;
+    margin-bottom: 4em;;
 }
 
 #title {
@@ -16,6 +16,15 @@ body {
     font-size: 30pt;
     color: #c33a22;
     text-align: center;
+}
+
+#vote-image {
+    display: block;
+    transform: scale(0.3);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10em;
+    margin-bottom: -10em;
 }
 
 #description {
@@ -39,17 +48,19 @@ hr {
     height: 2px;
     background-color: #fbc20d;
     border-color: #fbc20d;
+    width: 100%;
 }
 
 form {
     width: 60%;
     max-width: 800px;
     margin: 0 auto;
+    margin-bottom: 1;
     background-color: #3d4558;
     padding-left: 4em;
     padding-right: 4em;
     padding-top: 1em;
-    padding-bottom: 1em;
+    padding-bottom: 3em;
     border-radius: 5px;
     box-shadow: 0 0 5px 0 #3d4558;
 }
@@ -72,14 +83,34 @@ label {
     font-size: 1em;
 }
 
-input,
-textarea,
-select {
-    margin: 10px 0px 0 0;
+input {
+    margin: 10px 0 0 0;
     width: 100%;
     border-radius: 3px;
     border: none;
-    min-height: 2em;
+    min-height: 1.5em;
+    padding: 0.5em;
+    font-size: 1em;
+    font-family: verdana;
+}
+
+textarea {
+    margin: 10px 0 0 0;
+    width: 99%;
+    border-radius: 3px;
+    border: none;
+    min-height: 1.5em;
+    padding: 0.5em;
+    font-size: 1em;
+    font-family: verdana;
+}
+
+select {
+    margin: 10px 0 0 0;
+    width: 102%;
+    border-radius: 3px;
+    border: none;
+    min-height: 1.5em;
     padding: 0.5em;
     font-size: 1em;
     font-family: verdana;
@@ -111,12 +142,12 @@ input[type="submit"] {
     padding: 0.8em;
 }
 
-input[type="submit"] {
-    background-color: #f2f1e3;
+input[type="submit"]:hover {
+    background-color: #fbc20d;
     border-radius: 3px;
     font-size: 1em;
     font-weight: 900;
-    color: #c33a22;
+    color: #f2f1e3;
     padding: 0.8em;
 }
 
@@ -137,4 +168,27 @@ input[type="submit"]:active {
 
 legend {
     margin-bottom: 0.2em;
+}
+
+footer {
+    margin-top: 2em;
+    border: none;
+    text-align:  center;
+    font-family: georgia;    
+}
+
+#attribution {
+    color: #fbc20d;
+}
+
+#attribution:active {
+    color: #c33a22;
+}
+
+#attribution:visited {
+    color: #c33a22;
+}
+
+#attribution:hover {
+    color: #c33a22;
 }
